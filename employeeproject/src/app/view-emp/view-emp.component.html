@@ -1,0 +1,14 @@
+<h2>Employee Details</h2>
+<div *ngFor="let emp of emp1">
+    <div><b>ID:</b> {{emp.id}}</div>
+    <div><b>Name:</b> {{emp.name}}</div>
+    <div><b>Salary:</b> {{emp.salary| currency:"INR"}}</div>
+    <div><b>Permanent:</b> {{emp.permanent}}</div>
+    <div><b>Department ID:</b> {{emp.department_id}}</div>
+    <div><b>Name:</b> {{emp.department_name}}</div>
+    <div><b>Skills</b></div>
+    <div *ngFor="let skill of emp.skill">
+    <div>{{skill.id}}     {{skill.name}}</div>
+    </div>
+    <div><b>Date Of Birth::</b> {{emp.dob| date:"longDate"}}</div>
+</div>
